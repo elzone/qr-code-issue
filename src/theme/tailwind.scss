@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 1.625rem;
+  @apply leading-7;
+}
+
+h2 {
+  font-size: 1.375rem;
+  @apply leading-normal;
+}
+
+h3 {
+  font-size: 1.125rem;
+  @apply leading-5;
+}
+
+h4 {
+  @apply text-base leading-5;
+}
+
+h5 {
+  @apply text-sm leading-5;
+}
+
+h6 {
+  @apply text-xs leading-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+@layer base {
+  :root {
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.625rem;
+    --fade-background-rgb: 255, 255, 255;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-base font-semibold rounded-lg;
+  }
+
+  .btn-without-around-spaces {
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+    min-height: 0.5rem;
+  }
+
+  .btn-text-only {
+    @apply bg-transparent border-none p-0;
+  }
+
+  .txt-accent {
+    @apply text-3xl font-semibold leading-8;
+  }
+
+  .img-cover-parent {
+    @apply flex items-center justify-center overflow-hidden;
+  }
+
+  .img-cover {
+    object-fit: cover;
+  }
+
+  .video-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .img-fit {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .img-fit-height {
+    object-fit: contain;
+  }
+
+  .input-error {
+    @apply bg-error-red-200 text-error-red-800;
+  }
+
+  .hide-app-tab-bar {
+    transform: translateX(-100%);
+    transition: transform ease-out 0.3s;
+  }
+
+  .show-app-tab-bar {
+    transform: translateX(0);
+    transition: transform ease-out 0.3s;
+  }
+
+  .app-top-offset-with-breadcrumbs {
+    --offset-top: 6.5rem !important;
+  }
+
+  .hide-tab-bar #app-tab-bar {
+    display: none;
+  }
+
+  .show-tab-bar #app-tab-bar {
+    display: flex;
+  }
+
+  .fixed-button-bottom {
+    @apply fixed left-4 right-4 bottom-12
+  }
+
+  .full-width-with-padding {
+    @apply w-[100vw] px-4
+  }
+}
